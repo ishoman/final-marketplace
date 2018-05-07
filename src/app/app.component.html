@@ -1,11 +1,18 @@
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" routerLink="">Epicodus Tunes</a>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a routerLink="about">About</a></li>
-      <li><a routerLink="marketplace">Marketplace</a></li>
+    <ul class="navbar-nav navbar-right">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Menu
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="about">About</a>
+          <a class="dropdown-item" routerLink="marketplace">Marketplace</a>
+        </div>
+      </li>
     </ul>
   </div>
 </nav>

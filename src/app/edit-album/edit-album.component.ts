@@ -9,14 +9,26 @@ import { AlbumService } from '../album.service';
 })
 export class EditAlbumComponent implements OnInit {
   @Input() selectedAlbum;
+  editForm = null;
 
   constructor(private albumService: AlbumService) { }
 
   ngOnInit() {
   }
 
+  showEditForm(albumToEdit) {
+    this.editForm = albumToEdit;
+  }
+
   beginUpdatingAlbum(albumToUpdate){
     this.albumService.updateAlbum(albumToUpdate);
+    this.editForm = null;
+  }
+
+  beginDeletingAlbum(albumToDelete) {
+    if(confirm("Are you sure you want to delete this item from the inventory?")) {
+      this.albumService.deleteAlbum(albumToDelete);
+    }
   }
 
 }

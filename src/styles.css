@@ -6,3 +6,8 @@
   background-color: #f5f5f5;
   padding: 15px;
 }
+
+a:hover {
+  text-decoration: underline !important;
+  color: #dee0e2 !important;
+}

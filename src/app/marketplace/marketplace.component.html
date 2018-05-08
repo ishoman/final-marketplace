@@ -1,8 +1,15 @@
 <h2>Marketplace</h2>
-
-<div *ngFor="let album of albums | async" class="card mt-4">
+<select (change)="onChange($event.target.value)">
+  <option>Select Price Range</option>
+  <option value="1">Less than $10</option>
+  <option value="2">$10-$20</option>
+  <option value="3">$20-30</option>
+  <option value="4">More than $30</option>
+</select>
+<div *ngFor="let album of albums | async | price:filterByPrice" class="card mt-4">
   <div class="card-body">
     <h3 (click)="gotToDetailPage(album)" class="card-title"><em>{{album.title}}</em> by {{album.artist}}</h3>
+    <p>${{album.price}}</p>
     <div *ngIf="currentRoute === '/admin'">
       {{album.description}}
       <hr>
@@ -10,3 +17,4 @@
     </div>
   </div>
 </div>
+ <!-- | price:filterByPrice -->

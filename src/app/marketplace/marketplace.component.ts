@@ -15,6 +15,7 @@ export class MarketplaceComponent implements OnInit {
   currentRoute: string = this.router.url;
 
   selectedAlbum = null;
+  filterByPrice: string = "";
 
   constructor(private router: Router, private albumService: AlbumService) {}
 
@@ -41,5 +42,9 @@ export class MarketplaceComponent implements OnInit {
 
   gotToDetailPage(clickedAlbum) {
     this.router.navigate(['albums', clickedAlbum.$key]);
-  };
+  }
+
+  onChange(optionFromMenu) {
+    console.log(optionFromMenu);
+  this.filterByPrice = optionFromMenu;
 }

@@ -21,7 +21,14 @@
         <br>
         <textarea #newDescription></textarea>
       </div>
-      <button class="btn btn-info" (click)="submitForm(newTitle.value, newArtist.value, newDescription.value); newTitle.value=''; newArtist.value =''; newDescription.value=''">Add</button>
+
+      <div>
+        <label>Album Price:</label>
+        <br>
+        <input type="number" #newPrice>
+      </div>
+      <br>
+      <button class="btn btn-info" (click)="submitForm(newTitle.value, newArtist.value, newDescription.value, newPrice.value); newTitle.value=''; newArtist.value =''; newDescription.value=''; newPrice.value='';">Add</button>
     </div>
   </div>
 </div>

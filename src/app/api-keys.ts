@@ -2,12 +2,12 @@
 // <script>
 
   export let masterFirebaseConfig = {
-    apiKey: "AIzaSyDqNiym7WVriWz5jVfa4SuGenuBF0jQx0k",
-    authDomain: "marketplace714.firebaseapp.com",
-    databaseURL: "https://marketplace714.firebaseio.com",
-    projectId: "marketplace714",
-    storageBucket: "marketplace714.appspot.com",
-    messagingSenderId: "739025624192"
+    apiKey: "AIzaSyB4heAVCENvZZqjNC__S74981XmEk3xwXw",
+    authDomain: "angular-marketpla.firebaseapp.com",
+    databaseURL: "https://angular-marketpla.firebaseio.com",
+    projectId: "angular-marketpla",
+    storageBucket: "angular-marketpla.appspot.com",
+    messagingSenderId: "324019964088"
   };
   // firebase.initializeApp(config);
 // </script>
